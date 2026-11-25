@@ -3,7 +3,8 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   //add github projece name
-  base:'/MY_DOCS/',
+  //use domain delete base
+  //base:'/MY_DOCS/',
   title: "My Awesome Project",
   description: "A VitePress Site",
   themeConfig: {
