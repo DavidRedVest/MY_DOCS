@@ -27,13 +27,14 @@ export default defineConfig({
     //2.左侧边栏（支持多专栏独立分组，以后文章多了可按照目录拆分）
     sidebar: [
       {
-        text: '核心专栏',
+        text: '核心系统',
         items: [
-          { text: '嵌入式与底层系统', link: '/embedded/embedded' },
-          { text: '系统架构与中间件', link: '/architecture/architecture' },
-          { text: '跨平台与工具链', link: '/tooling/tooling' },
-          { text: '阅读与随笔', link: '/notes/notes' },
-          { text: '越野与山野', link: '/outdoors/outdoors' },
+          { text: '嵌入式与底层系统', link: '/embedded/embedded/ThreadX移植实战1/ThreadX移植实战1' }
+        ]
+      },
+      {
+        text: '跨平台开发',
+        items: [
           { text: '跨平台与工具链', link: '/tooling/vitepress博客搭建/vitepress博客搭建' }
         ]
       }
