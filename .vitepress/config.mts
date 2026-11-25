@@ -114,7 +114,24 @@ export default defineConfig({
     lastUpdated:{
       text:'最后更新于',
       formatOptions:{dateStyle:'short',timeStyle:'short'}
-    }
+    },
+
+    //右上角社交/联系图标，内置邮件信封图标
+    socialLinks: [
+      {
+        icon: {
+          svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z"/><path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z"/></svg>'
+        },
+        link: 'mailto:me@stonekernel.com',
+        ariaLabel: '发送邮件至 me@stonekernel.com'
+      }
+    ],
+
+    //首页底部显示邮箱联系方式
+    footer: {
+      message: '欢迎技术交流与探讨：<a href="mailto:me@stonekernel.com">me@stonekernel.com</a>',
+      copyright: 'Copyright © 2026 StoneKernel'
+    }    
 
 
   }
