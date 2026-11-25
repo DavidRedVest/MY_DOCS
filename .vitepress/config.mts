@@ -10,7 +10,7 @@ export default defineConfig({
   cleanUrls:true,
   //配置页面最后更新时间
   lastUpdated:true,
-  title: "StoneKernel技术笔记",
+  title: "StoneKernel技术博客",
   description: "嵌入式系统开发记录",
   lang: 'zh-CN', // 将默认界面提示语（如“上一页/下一页”、“本页目录”）切换为中文
   themeConfig: {
@@ -18,31 +18,70 @@ export default defineConfig({
     //1.顶部导航栏
     nav: [
       { text: '首页', link: '/' },
-      { text: '嵌入式与底层系统', link: '/embedded/embedded' },
-      { text: '系统架构与中间件', link: '/architecture/architecture' },
-      { text: '跨平台与工具链', link: '/tooling/tooling' },
-      { text: '阅读与随笔', link: '/notes/notes' },
-      { text: '越野与山野', link: '/outdoors/outdoors' }
+      { text: '嵌入式与底层系统', link: '/embedded/embedded',activeMatch: '/embedded/' },
+      { text: '系统架构与中间件', link: '/architecture/architecture',activeMatch: '/architecture/' },
+      { text: '跨平台与工具链', link: '/tooling/tooling',activeMatch: '/tooling/' },
+      { text: '阅读与随笔', link: '/notes/notes',activeMatch: '/notes/' },
+      { text: '越野与山野', link: '/outdoors/outdoors',activeMatch: '/outdoors/'  }
     ],
     //2.左侧边栏（支持多专栏独立分组，以后文章多了可按照目录拆分）
-    sidebar: [
-      {
-        text: '核心系统',
-        items: [
-          { text: '嵌入式与底层系统', link: '/embedded/embedded/ThreadX移植实战1/ThreadX移植实战1' }
-        ]
-      },
-      {
-        text: '跨平台开发',
-        items: [
-          { text: '跨平台与工具链', link: '/tooling/vitepress博客搭建/vitepress博客搭建' }
-        ]
-      }
-    ],
+    // sidebar:[],使用数组表示全局共享
+    sidebar: {
+      // 当URL以/embedded/开头时，只显示这一组
+      '/embedded/': [
+        {
+          text: '嵌入式与底层系统',
+          items: [
+            {text: '专栏导读', link: '/embedded/embedded'},
+            {text: 'threadx移植实战', link:'/embedded/ThreadX移植实战1/threadx移植实战1'}
+          ]
+        }
+      ],
+
+      '/architecture/': [
+        {
+          text: '系统架构与中间件',
+          items: [
+            { text: '专栏导读', link: '/architecture/architecture' }
+          ]
+        }
+      ],      
+
+      //当URL以/tooling/开头时，只显示这一组
+      '/tooling/': [
+        {
+          text: '跨平台与工具链',
+          items: [
+            { text: '专栏导读', link: '/tooling/tooling' },
+            { text: 'vitepress博客搭建', link: '/tooling/vitepress博客搭建/vitepress博客搭建' }
+          ]
+        }
+      ],
+
+      '/notes/': [
+        {
+          text: '阅读与随笔',
+          items: [
+            { text: '专栏导读', link: '/notes/notes' }
+          ]
+        }
+      ],
+      
+      '/outdoors/': [
+        {
+          text: '越野与山野',
+          items: [
+            { text: '专栏导读', link: '/outdoors/outdoors' }
+          ]
+        }
+      ]      
+
+    },
+
 
     //3.右侧页内大纲显示级别
     outline:{
-      level:[2,3],
+      level:'deep',
       label:'本页目录'
     },
 
