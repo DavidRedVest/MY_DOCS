@@ -1,5 +1,4 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
@@ -8,16 +7,21 @@ hero:
   tagline: "聚焦嵌入式固件、RTOS 移植、音视频流媒体架构与跨平台工具开发，记录代码之外的阅读与长距离徒步。"
   actions:
     - theme: brand
+      text: 项目专题
+      link: /projects/projects
+    - theme: alt
       text: 嵌入式与底层系统
       link: /embedded/embedded
     - theme: alt
       text: 跨平台与工具链
       link: /tooling/tooling
-    - theme: alt
-      text: 系统架构与中间件
-      link: /architecture/architecture
 
 features:
+  - icon: 🚀
+    title: 项目专题 · 完整工程实战
+    details: 涵盖 OmniLink 全场景工业互联设备管理系统与多路音视频流媒体监控系统的全栈架构演进。
+    link: /projects/projects
+    linkText: 查看项目全景
   - icon: ⚙️
     title: 嵌入式与底层系统
     details: MCU 固件架构、Eclipse ThreadX / FreeRTOS 实时操作系统移植、工业现场总线与底层驱动实战。
@@ -47,8 +51,16 @@ features:
 
 ---
 
+## 核心工程项目矩阵
+
+聚焦工业物联网与音视频流媒体两大方向，按独立系列记录从架构选型到代码落地的完整过程：
+
+| 项目体系 | 架构定位与子系统 | 核心技术栈 | 专题入口 |
+| :--- | :--- | :--- | :--- |
+| **OmniLink 全场景工业互联** | 包含 **Edge**（上位机+中控+传感器）、**Cloud**（网络+云服务+GUI）与 **Core**（嵌入式 Linux）三套演进架构 | C/C++、RTOS、嵌入式 Linux、RS485/CAN、云边协议 | [进入项目 →](/projects/omnilink/omnilink) |
+| **视频监控系统实战** | 多路网络摄像机接入、低延迟实时解码预览、流媒体转发与录像存储回放 | C++20、Qt6、FFmpeg、SDL2、RTSP/RTP、ZLMediaKit | [进入项目 →](/projects/video-surveillance/video-surveillance) |
+
 ## 精选实战记录
 
 - **[ThreadX 移植实战 1](/embedded/ThreadX移植实战1/threadx移植实战1)** — 从零搭建基于 CMake 与 GCC 工具链的 RTOS 工程框架。
 - **[VitePress 技术博客搭建与部署](/tooling/vitepress博客搭建/vitepress博客搭建)** — 使用 GitHub Actions 自动化构建并绑定自定义域名。
-
