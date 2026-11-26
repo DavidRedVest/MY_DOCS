@@ -13,6 +13,12 @@ export default defineConfig({
   title: "StoneKernel技术博客",
   description: "嵌入式系统开发记录",
   lang: 'zh-CN', // 将默认界面提示语（如“上一页/下一页”、“本页目录”）切换为中文
+
+  //配置游览器标签页网页图标（对应public/favicon.svg）
+  head:[
+    ['link',{rel:'icon',type:'image/svg+xml',href:'/favicon.svg'}]
+  ],
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     //1.顶部导航栏
