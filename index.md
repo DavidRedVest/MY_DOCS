@@ -64,3 +64,9 @@ features:
 
 - **[ThreadX 移植实战 1](/embedded/ThreadX移植实战1/threadx移植实战1)** — 从零搭建基于 CMake 与 GCC 工具链的 RTOS 工程框架。
 - **[VitePress 技术博客搭建与部署](/tooling/vitepress博客搭建/vitepress博客搭建)** — 使用 GitHub Actions 自动化构建并绑定自定义域名。
+
+---
+
+> *"The real voyage of discovery consists not in seeking new landscapes, but in having new eyes."*
+>
+> 真正的发现之旅不在于寻找新的景观，而在于拥有新的眼光。 —— 马塞尔·普鲁斯特（Marcel Proust）
