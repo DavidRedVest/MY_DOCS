@@ -29,6 +29,7 @@ MY_DOCS/
 ├── outdoors/               # 越野与山野专栏
 ├── index.md                # 博客首页
 └── README.md               # 仓库说明文档
+```
 
 ## 本地预览与构建
 
